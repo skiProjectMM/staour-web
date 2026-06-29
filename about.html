@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#5E84B0" />
+  <title>Staour — Nosotros</title>
+  <meta name="description" content="Descubre Staour, la app para encontrar tu monitor de esquí perfecto en el Pirineo y Andorra." />
+  <meta property="og:site_name" content="Staour" />
+  <meta property="og:title" content="Staour — Nosotros" />
+  <meta property="og:description" content="Descubre Staour, la app para encontrar tu monitor de esquí perfecto en el Pirineo y Andorra." />
+  <link rel="icon" href="assets/logo-s-beige.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/logo-s-beige.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Cookie banner -->
+  <div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-label="Aviso de cookies">
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__text">
+        Usamos cookies para mejorar la funcionalidad del sitio. Incluye cookies de analítica y publicidad. Para más información, consulta nuestra Política de cookies.
+      </div>
+      <div class="cookie-banner__actions">
+        <a href="privacidad.html" class="cookie-banner__link">Más</a>
+        <button type="button" id="cookie-accept" class="cookie-banner__accept">Vale</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video background (blurred) -->
+  <div class="video-bg video-bg--blur" aria-hidden="true">
+    <video muted loop playsinline autoplay preload="auto">
+      <source src="fondo.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <!-- Page layout -->
+  <div class="layout layout--about">
+    <header class="header">
+      <div class="header__inner">
+        <nav class="header__nav" aria-label="Principal">
+          <a href="/" class="header__logo" aria-label="Staour inicio">
+            <img src="assets/logo-staour-beige.png" alt="Staour" />
+          </a>
+
+          <ul class="header__links">
+            <li><a href="about.html">Nosotros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="privacidad.html">Privacidad</a></li>
+            <li class="nav-dropdown">
+              <span class="nav-dropdown__trigger" tabindex="0">Redes</span>
+              <ul class="nav-dropdown__menu">
+                <li><a href="https://www.instagram.com/staour" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              </ul>
+            </li>
+            <li class="nav-dropdown">
+              <span class="nav-dropdown__trigger" tabindex="0">Más</span>
+              <ul class="nav-dropdown__menu">
+                <li><a href="terms.html">Términos</a></li>
+                <li><a href="guidelines.html">Normas</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <button type="button" id="menu-open" class="header__menu-btn" aria-label="Abrir menú" aria-expanded="false">
+          Menú
+        </button>
+      </div>
+    </header>
+
+    <main class="about-hero">
+      <!-- Phone mockup -->
+      <div class="phone-mockup">
+        <div class="phone-mockup__frame">
+          <div class="phone-mockup__notch"></div>
+          <div class="phone-mockup__screen">
+            <div class="phone-slideshow">
+              <img src="assets/IMG_3911.jpg" alt="Staour app 1" class="phone-slide phone-slide--active" />
+              <img src="assets/IMG_3912.jpg" alt="Staour app 2" class="phone-slide" />
+              <img src="assets/IMG_3914.jpg" alt="Staour app 3" class="phone-slide" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text content -->
+      <div class="about-content">
+        <p class="about-content__text">
+          <strong>Staour</strong> es la app de esquí, no solo para buscar monitor.
+          Conecta con la montaña a través de la vida que ya tienes:
+          estaciones, amigos, intereses, historias
+          y lo que está pasando cerca de ti.
+        </p>
+        <a class="cta-btn" href="#waitlist">
+          Únete ahora
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="mobile-menu hidden" aria-hidden="true">
+    <div class="mobile-menu__top">
+      <button type="button" id="menu-close" class="mobile-menu__close" aria-label="Cerrar menú">Cerrar</button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Móvil">
+      <ul>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="privacidad.html">Privacidad</a></li>
+        <li><a href="terms.html">Términos</a></li>
+        <li><a href="guidelines.html">Normas</a></li>
+        <li><a href="soporte.html">Soporte</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__footer">
+      <a class="cta-btn cta-btn--full" href="#waitlist">
+        Únete ahora
+      </a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    (function () {
+      const slides = document.querySelectorAll('.phone-slide');
+      if (slides.length < 2) return;
+      let current = 0;
+      setInterval(function () {
+        slides[current].classList.remove('phone-slide--active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('phone-slide--active');
+      }, 3000);
+    })();
+  </script>
+</body>
+</html>
+
