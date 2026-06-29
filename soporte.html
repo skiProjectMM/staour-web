@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soporte — Staour</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .support-wrap { max-width: 740px; margin: 0 auto; padding: 80px 24px 120px; }
+    .support-wrap h1 { font-size: 40px; font-weight: 900; letter-spacing: -1px; margin-bottom: 12px; }
+    .support-wrap .sub { font-size: 17px; color: var(--text-soft); margin-bottom: 56px; line-height: 1.65; }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: var(--primary-soft);
+      border: 1.5px solid var(--primary);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 48px;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+    .contact-card:hover { transform: translateY(-2px); }
+    .contact-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; flex-shrink: 0;
+    }
+    .contact-text h3 { font-size: 17px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+    .contact-text p  { font-size: 14px; color: var(--text-soft); }
+    .contact-text span { font-size: 14px; font-weight: 700; color: var(--primary); }
+
+    .faq-title { font-size: 24px; font-weight: 800; margin-bottom: 24px; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; cursor: pointer; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-size: 16px; font-weight: 700; color: var(--text);
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    }
+    .faq-q .arrow { font-size: 18px; color: var(--primary); transition: transform 0.2s; flex-shrink: 0; }
+    .faq-a { font-size: 14px; color: var(--text-soft); line-height: 1.75; margin-top: 12px; display: none; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .arrow { transform: rotate(180deg); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <span class="logo-icon">⛷</span>
+      <span class="logo-text">Staour</span>
+    </a>
+  </nav>
+
+  <div class="support-wrap">
+    <h1>Soporte</h1>
+    <p class="sub">¿Tienes alguna duda o problema? Estamos aquí para ayudarte.<br />Respondemos en menos de 24 horas.</p>
+
+    <a class="contact-card" href="mailto:soporte@staour.com?subject=Soporte%20Staour">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-text">
+        <h3>Escríbenos por email</h3>
+        <p>Tiempo de respuesta &lt; 24 h</p>
+        <span>soporte@staour.com</span>
+      </div>
+    </a>
+
+    <p class="faq-title">Preguntas frecuentes</p>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Cómo reservo una clase? <span class="arrow">↓</span></div>
+      <div class="faq-a">Busca un monitor en la app, entra en su perfil, elige el servicio y selecciona una fecha y hora disponible. Confirmas el pago y recibirás un QR de acceso.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Cómo funciona el pago? <span class="arrow">↓</span></div>
+      <div class="faq-a">El pago se procesa de forma segura con Stripe. El importe queda retenido hasta que el monitor escanea tu QR al inicio de la clase. No almacenamos datos de tu tarjeta.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Puedo cancelar una reserva? <span class="arrow">↓</span></div>
+      <div class="faq-a">Sí, puedes cancelar desde la app antes de que empiece la clase. La política de reembolso depende del monitor. Contacta con soporte si tienes algún problema.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Cómo me convierto en monitor? <span class="arrow">↓</span></div>
+      <div class="faq-a">En tu perfil encontrarás el botón "Convertirme en monitor". Rellena el formulario con tu titulación y experiencia. Nuestro equipo lo revisará y te activará el panel de monitor.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Cómo valoro una clase? <span class="arrow">↓</span></div>
+      <div class="faq-a">Una vez finalizada la clase (tras el escaneo del QR y el fin del horario), recibirás una notificación para valorar al monitor. Solo puedes valorar cada clase una vez.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Cómo elimino mi cuenta? <span class="arrow">↓</span></div>
+      <div class="faq-a">Desde la app: Perfil → Ajustes → Eliminar cuenta. Todos tus datos se borrarán permanentemente en 30 días. Si necesitas ayuda, escríbenos a soporte@staour.com.</div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="/" class="nav-logo footer-logo">
+        <span class="logo-icon">⛷</span>
+        <span class="logo-text">Staour</span>
+      </a>
+      <div class="footer-links">
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="soporte.html">Soporte</a>
+        <a href="mailto:soporte@staour.com">soporte@staour.com</a>
+      </div>
+      <p class="footer-copy">© 2025 Staour. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
